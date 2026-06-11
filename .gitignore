@@ -1,0 +1,24 @@
+# Development files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Testing installations
+test-install/
+.test/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Claude Code local settings (user-specific)
+.claude/settings.local.json
