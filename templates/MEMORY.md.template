@@ -1,0 +1,62 @@
+# Memory Index
+
+This is your central memory system for Claude Code, managed by **claude-confessor**.
+
+---
+
+## Active Memories
+
+- [User Profile](user-profile.md) — Your personality, learning style, and preferences
+
+---
+
+## How This Works
+
+When you ask Claude to "remember" something, it gets saved as a separate file in this directory and linked here.
+
+### Memory Types
+
+| Type | What It Stores | Example |
+|------|----------------|---------|
+| **user** | Your role, background, preferences, knowledge | "I'm a backend engineer who prefers Python" |
+| **feedback** | Corrections or validated approaches | "Don't use mocks in integration tests" |
+| **project** | Ongoing work, goals, or context | "We're in a feature freeze until June 20" |
+| **reference** | Pointers to external resources | "Bugs are tracked in Linear project INGEST" |
+
+### Memory Lifecycle
+
+```
+User: "Remember that I prefer detailed explanations"
+  ↓
+Claude saves: user_explanation-style.md
+  ↓
+Claude updates: MEMORY.md (adds a link)
+  ↓
+Future sessions: Claude reads MEMORY.md → loads all linked memories
+```
+
+---
+
+## Quick Reference
+
+| What You Say | What Claude Does |
+|--------------|-----------------|
+| "Remember that [preference]" | Saves a new memory file and links it here |
+| "Forget about [thing]" | Removes the memory file and its link |
+| "What do you remember about me?" | Reads all memories and summarizes them |
+| "Save this as a skill" | Exports a pattern to `~/.claude-confessor/skills/` |
+| "Update my profile" | Edits `user-profile.md` with new information |
+
+---
+
+## Maintenance
+
+- **Stale memories:** If a memory becomes outdated, ask Claude to update or remove it
+- **Duplicate memories:** Claude should merge or consolidate duplicate entries
+- **Organization:** Memories are organized by type (user, feedback, project, reference)
+- **Search:** Ask Claude "What memories do I have about [topic]?"
+
+---
+
+**Memory System Version:** claude-confessor v1.0
+**Last Updated:** [Auto-updated by Claude]

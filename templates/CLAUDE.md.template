@@ -1,0 +1,120 @@
+# claude-confessor - Centralized Memory System
+
+**Your confessor is listening.**
+
+## Memory System Configuration
+
+Memory is stored centrally and loaded at every session start.
+
+**Primary memory location:** `~/.claude-confessor/memory/`
+
+At the start of every conversation:
+1. Read `~/.claude-confessor/memory/MEMORY.md` to load the memory index
+2. Read `~/.claude-confessor/memory/user-profile.md` to understand who I am and how I work
+3. Use these memories to inform your behavior, communication style, and recommendations
+
+## Saving Memories
+
+When I ask you to "remember" something, or when you learn important information about me:
+
+1. Determine the memory type:
+   - **user** — Information about my role, background, preferences, knowledge
+   - **feedback** — Guidance on what to do or avoid (corrections or validated approaches)
+   - **project** — Ongoing work, goals, or context about this specific project
+   - **reference** — Pointers to where information lives (docs, dashboards, repos)
+
+2. Save to: `~/.claude-confessor/memory/{type}_{name}.md`
+
+3. Use this frontmatter format:
+   ```markdown
+   ---
+   name: short-kebab-case-slug
+   description: One-line summary (used to decide relevance in future conversations)
+   metadata:
+     type: user | feedback | project | reference
+   ---
+
+   [Memory content here]
+
+   For feedback and project memories, structure as:
+   - Lead with the rule/fact
+   - **Why:** (the reason or motivation)
+   - **How to apply:** (when/where this guidance applies)
+   ```
+
+4. Update the index at `~/.claude-confessor/memory/MEMORY.md` with a one-line pointer
+
+## Forgetting Memories
+
+When I ask you to "forget" something:
+
+1. Find the relevant memory file in `~/.claude-confessor/memory/`
+2. Show me what you're about to delete
+3. Ask for confirmation
+4. Remove the file and its entry from `MEMORY.md`
+
+## Auto-Generated Skills
+
+When I solve a tricky problem or you identify a reusable pattern, you can save it as a skill:
+
+**Skills location:** `~/.claude-confessor/skills/`
+
+Skills should be:
+- Reusable across projects
+- Well-documented with examples
+- Named clearly (e.g., `api-integration-pattern.md`, `debugging-react-hooks.md`)
+
+When saving a skill:
+1. Ask if I want to save it
+2. Suggest a clear name
+3. Write the skill file with structure:
+   ```markdown
+   # [Skill Name]
+
+   ## When to Use
+   [Description of the problem this solves]
+
+   ## Approach
+   [Step-by-step solution]
+
+   ## Example
+   [Code example or walkthrough]
+
+   ## Variations
+   [Alternative approaches or edge cases]
+   ```
+
+## Git Workflow Rules
+
+**CRITICAL: Never take destructive git actions without explicit permission.**
+
+- **Never auto-push** to remote repositories
+- **Always ask before committing**
+- Before staging, show me a summary of changes
+- Before creating a PR, walk through what will be included
+- Never use `--force` flags without explicit approval
+- Always prefer creating new commits over amending (safer)
+
+## Communication Guidelines
+
+Adapt your responses based on my user profile (`~/.claude-confessor/memory/user-profile.md`):
+
+- Match my preferred **learning style** (visual, analytical, hands-on, exploratory)
+- Adjust explanation **depth** to my technical background
+- Use my preferred **tone** (professional, casual, enthusiastic, straightforward)
+- Honor my **workflow preferences** (testing frameworks, languages, tools)
+
+## Quick Reference
+
+| Command | What It Does |
+|---------|-------------|
+| "Remember that [X]" | Saves a memory |
+| "Forget about [X]" | Removes a memory |
+| "What do you remember about me?" | Loads and summarizes memories |
+| "Save this as a skill" | Exports a pattern to skills directory |
+| "Show my profile" | Reads and displays user-profile.md |
+
+---
+
+**Installed:** claude-confessor v1.0
+**Repository:** https://github.com/GeneralSystemError/claude-confessor

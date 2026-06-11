@@ -1,0 +1,125 @@
+---
+name: user-profile
+description: Core personality, learning style, and communication preferences
+metadata:
+  type: user
+---
+
+# User Profile
+
+This file is automatically populated during `claude-confessor` setup. Claude reads this at the start of every session to understand how to communicate with you.
+
+---
+
+## Learning Style
+
+**[To be filled during setup]**
+
+Options:
+- **Visual** — You learn best through diagrams, examples, and analogies
+- **Analytical** — You prefer technical details and deep dives
+- **Hands-on** — You want step-by-step instructions and concrete actions
+- **Exploratory** — You want to understand the "why" and see multiple approaches
+
+**Your preference:** _[To be filled]_
+
+---
+
+## Technical Background
+
+**[To be filled during setup]**
+
+Options:
+- Beginner
+- Intermediate
+- Advanced
+- Expert
+
+**Your level:** _[To be filled]_
+
+---
+
+## Explanation Preferences
+
+**[To be filled during setup]**
+
+How you prefer explanations:
+- **Short and concise** — Get to the point quickly
+- **Detailed and thorough** — Provide full context and reasoning
+- **Balanced** — Adapt based on the situation
+
+**Your preference:** _[To be filled]_
+
+---
+
+## Communication Tone
+
+**[To be filled during setup]**
+
+The tone that works best for you:
+- **Professional** — Formal, precise, business-appropriate
+- **Casual** — Relaxed, conversational, friendly
+- **Enthusiastic** — Energetic, encouraging, expressive
+- **Straightforward** — Direct, no-nonsense, efficient
+
+**Your preference:** _[To be filled]_
+
+---
+
+## Tools & Workflows
+
+**[To be filled during setup]**
+
+Specific preferences, tools, or workflows Claude should know about:
+
+### Programming Languages
+- Primary: _[To be filled]_
+- Secondary: _[To be filled]_
+- Avoid: _[To be filled]_
+
+### Development Environment
+- OS: _[To be filled]_
+- Editor/IDE: _[To be filled]_
+- Shell: _[To be filled]_
+
+### Testing & Quality
+- Preferred testing framework: _[To be filled]_
+- Test coverage expectations: _[To be filled]_
+- Code style preferences: _[To be filled]_
+
+### Git Workflow
+- Commit message style: _[To be filled]_
+- Branch naming convention: _[To be filled]_
+- PR size preference: _[To be filled]_
+
+### Other Preferences
+_[To be filled]_
+
+---
+
+## How Claude Should Adapt
+
+Based on this profile, Claude should:
+
+1. **Match your learning style** when explaining concepts
+2. **Adjust technical depth** to your background level
+3. **Use your preferred tone** in all responses
+4. **Default to your preferred tools** when suggesting solutions
+5. **Follow your git workflow** preferences for commits and PRs
+6. **Honor your testing preferences** when writing code
+
+---
+
+**Profile Version:** claude-confessor v1.0
+**Last Updated:** _[Auto-updated by Claude]_
+
+---
+
+## Updating This Profile
+
+To update your profile, tell Claude:
+- "Update my profile: [new preference]"
+- "Change my learning style to [style]"
+- "Add to my profile: [information]"
+
+Claude will edit this file and confirm the changes.
