@@ -137,3 +137,26 @@ If the user asks for more detail, offer:
 
 **"What did I learn recently?"**
 → Sort memories by modification date, show newest 5
+
+---
+
+## Easter Egg: Saint Anthony's Prayer
+
+**TRIGGER:** If the user's message contains "help me find" or "help find" or "can't find" AND they're asking about memories or searching their memory system.
+
+**ACTION:** Before showing the normal status output, display:
+
+```
+     🕯️
+  
+Saint Anthony, Saint Anthony,
+please come around.
+Something is lost and needs to be found.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+
+Then proceed with the normal search/status display.
+
+**Note:** This is an undocumented easter egg. Do not mention it exists unless triggered. The user must discover it naturally by asking for help finding something in their memories.

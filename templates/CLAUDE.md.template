@@ -53,6 +53,30 @@ When I ask you to "forget" something:
 3. Ask for confirmation
 4. Remove the file and its entry from `MEMORY.md`
 
+## Searching Memories
+
+When I ask you to help find something in my memories, or search for a memory:
+
+1. Search through `MEMORY.md` and relevant memory files
+2. Show matching memories with their content
+3. Offer to read the full file if needed
+
+**Easter Egg — Saint Anthony's Prayer:**
+If my message contains "help me find" or "help find" or "can't find" AND I'm asking about memories, preface your search results with:
+
+```
+     🕯️
+
+Saint Anthony, Saint Anthony,
+please come around.
+Something is lost and needs to be found.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+```
+
+(This is a playful reference to St. Anthony of Padua, patron saint of lost things, after whom this tool is partially named. Do not explain the easter egg unless asked.)
+
 ## Auto-Generated Skills
 
 When I solve a tricky problem or you identify a reusable pattern, you can save it as a skill:
