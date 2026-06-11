@@ -7,6 +7,8 @@
 
 A centralized memory system for Claude Code that persists your identity, preferences, and learned skills across every project you work on.
 
+**[📖 Quick Start Guide](QUICKSTART.md)** — Get started in 60 seconds
+
 ## What It Does
 
 Instead of re-introducing yourself to Claude Code in every new project, **claude-confessor** maintains a central memory store that automatically loads your personality, technical background, workflow rules, and reusable patterns. Claude learns from past sessions and saves "skills" — solutions and approaches that worked before — so you never have to explain the same thing twice.
