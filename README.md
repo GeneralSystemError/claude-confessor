@@ -23,7 +23,35 @@ The "confessor" aspect: you tell Claude your preferences, habits, and quirks onc
 
 ## Installation
 
-### Option A: One-Line Install (Recommended)
+### Option A: Claude Code Skill (Easiest)
+
+**From within Claude Code**, type:
+
+```
+/confessor-setup
+```
+
+This runs an interactive setup that walks you through configuration step-by-step.
+
+#### Installing the Skills
+
+**Method 1: Auto-install from repository**
+```bash
+# Install all confessor skills
+curl -fsSL https://raw.githubusercontent.com/GeneralSystemError/claude-confessor/main/install.sh | bash
+```
+
+**Method 2: Manual skill installation**
+1. Download skills from `skills/` directory
+2. Copy to `~/.claude/skills/`:
+   ```bash
+   mkdir -p ~/.claude/skills
+   cp skills/*.md ~/.claude/skills/
+   ```
+3. Restart Claude Code or start a new session
+4. Run `/confessor-setup`
+
+### Option B: One-Line Install Script
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/GeneralSystemError/claude-confessor/main/install.sh | bash
@@ -38,7 +66,9 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### Option B: Manual Setup
+This installs both the skills AND sets up the directory structure.
+
+### Option C: Manual Setup (No Skills)
 
 1. Clone this repository
 2. Copy the contents of `prompts/SETUP.md`
@@ -49,7 +79,21 @@ chmod +x install.sh
 
 Once installed, Claude Code will automatically load your memories and preferences in every project.
 
-### Asking Claude to Remember
+### Quick Commands (Skills)
+
+If you installed the skills:
+
+```
+/confessor-setup       — Run interactive setup (first-time or reconfigure)
+/confessor-status      — Show all active memories and system status
+/confessor-teardown    — Safely remove confessor from your system
+```
+
+### Natural Language Memory Management
+
+Claude automatically understands these requests:
+
+#### Asking Claude to Remember
 
 ```
 "Remember that I prefer TypeScript over JavaScript"
@@ -57,22 +101,23 @@ Once installed, Claude Code will automatically load your memories and preference
 "Remember my preferred testing framework is Jest"
 ```
 
-### Asking Claude to Forget
+#### Asking Claude to Forget
 
 ```
 "Forget my preference for TypeScript"
 "Remove the memory about X"
 ```
 
-### Checking What Claude Knows
+#### Checking What Claude Knows
 
 ```
 "What do you remember about me?"
 "Show me my saved skills"
 "What are my preferences?"
+/confessor-status
 ```
 
-### Saving a Skill
+#### Saving a Skill
 
 After solving a tricky problem:
 
